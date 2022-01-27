@@ -39,3 +39,49 @@ year = int(input("Enter a year: "))
 month = int(input("Enter a month: "))
 days = days_in_month(year, month)
 print(days)
+
+# Calculator
+
+from art import logo
+
+def add(n1, n2):
+  return n1 + n2
+
+def subtract(n1, n2):
+  return n1 - n2
+
+def multiply(n1, n2):
+  return n1 * n2
+
+def divide(n1, n2):
+  return n1 / n2
+
+operations = {
+  "+": add,
+  "-": subtract,
+  "*": multiply,
+  "/": divide
+}
+
+def continueCalculate(n1):
+  print("Which operation would you like to perform ( ", end=" ")
+  for key in operations:
+    print(key, end = " ")
+  operator = input(")? ")
+  num2 = float(input("What is the next number? "))
+  result = operations[operator](n1, num2)
+  print(f"{n1} {operator} {num2} = {result}")
+  keepGoingPrompt = input(f"Type (Y) to continue calculating with {result}, type (N) to start a new calculation, or type (X) to exit: ").lower()
+  if keepGoingPrompt == "n":
+    startCalculate()
+  elif keepGoingPrompt == "y":
+    continueCalculate(result)
+  else:
+    return
+    
+def startCalculate():
+  num1 = float(input("What is the first number? "))
+  continueCalculate(num1)
+
+print(logo)
+startCalculate()

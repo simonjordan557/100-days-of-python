@@ -2,15 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>a4d93df3-76d6-4fff-ba6d-6708b0bbeeb3</ProjectGuid>
+    <ProjectGuid>a4fb0ac6-110c-429c-83bd-28e70848deec</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Day10.py</StartupFile>
+    <StartupFile>Day11.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>Day10</Name>
-    <RootNamespace>Day10</RootNamespace>
+    <Name>Day11</Name>
+    <RootNamespace>Day11</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Day10.py" />
+    <Compile Include="Day11.py" />
     <Compile Include="art.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
