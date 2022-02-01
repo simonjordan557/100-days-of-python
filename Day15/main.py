@@ -50,7 +50,7 @@ coins = {
     },
     "pennies": {
         "worth": 0.01,
-        "balance" : 0
+        "balance": 0
     }
 }
 
@@ -93,13 +93,15 @@ def get_payment(drink):
     for k, v in coins.items():
         v["balance"] = int(input(f"How many {k}? "))
 
+
 def reset_coin_counter():
     global coins
     for k, v in coins.items():
         v["balance"] = 0
 
-def format_decimal(str):
-    return "{:.3g}".format(str)
+
+def format_decimal(s):
+    return "{:.3g}".format(s)
 
 
 # TODO: 4 - Function to check payment is adequate and give change
@@ -137,6 +139,7 @@ def check_resources(drink):
             return k
     return ""
 
+
 while True:
     reset_coin_counter()
     selected_drink = get_user_order()
@@ -159,4 +162,3 @@ while True:
         continue
     else:
         pour_drink(selected_drink)
-
