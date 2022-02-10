@@ -15,7 +15,7 @@ class Scoreboard(Turtle):
         self.write(f"SCORE: {score}", align="center", font=("",18, ""))
         self.penup()
 
-    def game_over(self,score):
+    def game_over(self, score):
         self.penup()
         self.goto(0, 0)
         self.pendown()
