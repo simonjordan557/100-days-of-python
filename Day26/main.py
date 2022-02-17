@@ -49,3 +49,13 @@ sentence_list = sentence.split()
 result = {word: len(word) for word in sentence_list}
 
 print(result)
+
+import pandas
+
+nato_data = pandas.read_csv("nato_phonetic_alphabet.csv")
+nato_dict = {row.letter: row.code for (index, row) in nato_data.iterrows()}
+word_in = input("Enter a word: ")
+word_as_list = word_in.split()
+word_as_list = [s.upper() for s in word_in]
+word_as_nato = [nato_dict[v] for v in word_as_list]
+print(f"{word_in}: {word_as_nato}")
